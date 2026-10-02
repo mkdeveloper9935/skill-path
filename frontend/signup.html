@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Create your Skill Path account.">
+
+    <title>Create Account | Skill Path</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <!-- Left Side -->
+            <section class="auth-info">
+
+                <a href="index.html" class="auth-logo">
+                    <span class="logo-icon">S</span>
+                    <span>Skill<span>Path</span></span>
+                </a>
+
+                <div class="auth-info-content">
+
+                    <span class="auth-label">
+                        START YOUR JOURNEY
+                    </span>
+
+                    <h1>
+                        Learn.
+                        <span>Build. Grow.</span>
+                    </h1>
+
+                    <p>
+                        Create your Skill Path account and start
+                        building the skills you need for your future.
+                    </p>
+
+                    <div class="auth-points">
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Personalized learning paths</p>
+                        </div>
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Track your learning progress</p>
+                        </div>
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Build practical projects</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Right Side -->
+            <section class="auth-form-section">
+
+                <div class="auth-form-box">
+
+                    <div class="form-heading">
+
+                        <h2>Create Account 🚀</h2>
+
+                        <p>
+                            Start your learning journey today
+                        </p>
+
+                    </div>
+
+
+                    <form id="signupForm">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="confirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <label class="terms">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span>
+                                I agree to the Skill Path
+                                <a href="#">Terms & Conditions</a>
+                            </span>
+
+                        </label>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            Create Account
+                        </button>
+
+                    </form>
+
+
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+
+
+                    <p class="switch-auth">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                    </p>
+
+
+                    <a
+                        href="index.html"
+                        class="back-home"
+                    >
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const signupForm =
+            document.getElementById("signupForm");
+
+        signupForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+            const confirmPassword =
+                document.getElementById("confirmPassword").value;
+
+            if (
+                !name ||
+                !email ||
+                !password ||
+                !confirmPassword
+            ) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+
+                alert(
+                    "Password and Confirm Password do not match."
+                );
+
+                return;
+            }
+
+            alert(
+                "Account creation will be connected to the backend soon."
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>

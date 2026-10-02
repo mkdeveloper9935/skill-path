@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Login to your Skill Path account.">
+
+    <title>Login | Skill Path</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <!-- Left Side -->
+            <section class="auth-info">
+
+                <a href="index.html" class="auth-logo">
+                    <span class="logo-icon">S</span>
+                    <span>Skill<span>Path</span></span>
+                </a>
+
+                <div class="auth-info-content">
+
+                    <span class="auth-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h1>
+                        Continue Your
+                        <span>Learning Journey.</span>
+                    </h1>
+
+                    <p>
+                        Login to access your learning paths,
+                        projects and progress.
+                    </p>
+
+                    <div class="auth-points">
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Track your learning progress</p>
+                        </div>
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Follow structured roadmaps</p>
+                        </div>
+
+                        <div class="auth-point">
+                            <span>✓</span>
+                            <p>Build real-world projects</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Right Side -->
+            <section class="auth-form-section">
+
+                <div class="auth-form-box">
+
+                    <div class="form-heading">
+
+                        <h2>Welcome Back 👋</h2>
+
+                        <p>
+                            Login to your Skill Path account
+                        </p>
+
+                    </div>
+
+
+                    <form id="loginForm">
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-options">
+
+                            <label class="remember-me">
+                                <input
+                                    type="checkbox"
+                                    id="remember"
+                                >
+                                Remember me
+                            </label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            Login
+                        </button>
+
+                    </form>
+
+
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+
+
+                    <p class="switch-auth">
+
+                        Don't have an account?
+
+                        <a href="signup.html">
+                            Create Account
+                        </a>
+
+                    </p>
+
+
+                    <a
+                        href="index.html"
+                        class="back-home"
+                    >
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("email").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            if (!email || !password) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            alert(
+                "Login system will be connected to the backend soon."
+            );
+
+        });
+
+
+        const forgotPassword =
+            document.getElementById("forgotPassword");
+
+        forgotPassword.addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Password recovery will be added with the backend."
+            );
+
+        });
+
+    </script>
+
+</body>
+</html>
